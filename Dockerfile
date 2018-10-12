@@ -5,4 +5,4 @@ WORKDIR /terraform
 
 COPY . ./
 
-RUN terraform init
+RUN ls -lsa
