@@ -5,4 +5,4 @@ WORKDIR /terraform
 
 COPY . ./
 
-CMD ["terraform", "init"]
+RUN ["terraform", "init"]
