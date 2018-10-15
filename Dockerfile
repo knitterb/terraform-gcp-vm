@@ -13,6 +13,6 @@ COPY *.tf ./
 COPY credentials.json ./
 
 RUN ["terraform", "version"]
-RUN ["terraform", "init", "-backend-config=$BUCKET"]
+RUN ["terraform", "init", "-backend-config bucket=$BUCKET"]
 
 ENTRYPOINT [ "terraform" ]
