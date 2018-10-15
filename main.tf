@@ -31,8 +31,8 @@ resource "google_compute_instance" "default" {
   }
 }
 
-resource "google_compute_instance" "test3" {
-  name         = "test3"
+resource "google_compute_instance" "test4" {
+  name         = "test4"
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
 
@@ -45,8 +45,5 @@ resource "google_compute_instance" "test3" {
   network_interface {
     network = "default"
 
-    access_config {
-      // Ephemeral IP
-    }
   }
 }
