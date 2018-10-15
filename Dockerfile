@@ -8,6 +8,7 @@ RUN mkdir -p /terraform
 WORKDIR /terraform
 
 COPY *.tf ./
+COPY credentials.json ./
 
 RUN ["terraform", "version"]
 RUN ["terraform", "init"]

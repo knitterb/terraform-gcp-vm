@@ -1,6 +1,7 @@
 // Configure the Google Cloud provider
 provider "google" {
   project     = "${var.project_id}"
+  credentials = "credentials.json"
 }
 
 resource "google_compute_instance" "default" {
