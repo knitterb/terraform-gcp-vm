@@ -1,6 +1,8 @@
 
 terraform {
-  backend "gcs" {}
+  backend "gcs" {
+    credentials="credentials.json"
+  }
 }
 
 // Configure the Google Cloud provider
