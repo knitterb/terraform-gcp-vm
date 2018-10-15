@@ -1,3 +1,10 @@
+
+terraform {
+  backend "gcs" {
+    bucket  = "${var.project_id}-repo"
+  }
+}
+
 // Configure the Google Cloud provider
 provider "google" {
   project     = "${var.project_id}"
