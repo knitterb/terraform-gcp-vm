@@ -1,8 +1,6 @@
 
 terraform {
-  backend "gcs" {
-    bucket  = "${var.project_id}-repo"
-  }
+  backend "gcs" {}
 }
 
 // Configure the Google Cloud provider

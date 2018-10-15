@@ -1,5 +1,7 @@
 FROM golang:alpine
 
+ARG BUCKET
+
 RUN apk update && \
     apk upgrade && \
     apk add terraform
@@ -11,6 +13,6 @@ COPY *.tf ./
 COPY credentials.json ./
 
 RUN ["terraform", "version"]
-RUN ["terraform", "init"]
+RUN ["terraform", "init", "-backend-config=$BUCKET"]
 
 ENTRYPOINT [ "terraform" ]
